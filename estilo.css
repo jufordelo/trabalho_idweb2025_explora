@@ -6,7 +6,7 @@
 h1 {
   text-align: center;
   font-size: 32px;
-  font-family: 'Playfair Display', serif; /* Fonte de destaque */
+  font-family: 'Playfair Display', serif;
   margin-bottom: 40px;
 }
 
@@ -15,6 +15,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f2eef14e;
 }
+
 .cards-container {
     
   display: flex; 
@@ -28,7 +29,7 @@ body {
   background-color: rgb(237, 206, 229);
   padding: 30px 25px;
   border-radius: 10px;
-  box-shadow: 0px 8px 18px rgba(163, 94, 154, 0.822);
+  box-shadow: 0px 8px 18px rgba(131, 24, 115, 0.822);
   width: 320px; 
 }
 
@@ -92,12 +93,20 @@ body {
 }
 
 .background {
-  background-image: url("imagens/logoo.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
   position: relative;
+  height: 90vh;
   box-shadow: 0px 8px 18px rgb(185, 104, 173);
+  overflow: hidden;
+}
+
+.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 
@@ -108,7 +117,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  position: relative;
+  z-index: 1;
 }
 
 .overlay h2 {
@@ -166,4 +176,116 @@ body {
   text-align: center; 
   font: size 40px;
   padding:smaller; 
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Filtro escuro */
+  z-index: 1;
+}
+
+.image-container img {
+
+  width: 100%;
+  height: auto;
+  display: block;
+ 
+}
+.text-top {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  
+}
+
+.city-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(236, 229, 235, 0.866);
+
+}
+.text-top,
+.city-name {
+  z-index: 2;
+}
+
+
+.title {
+  text-align: center;
+  color: #cb2a78;
+  font-weight: bold;
+  margin: 15px 0 10px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.price {
+  background-color: #cb2a78;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: block;
+  padding: 12px;
+  margin: 10px 20px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #333;
 }
