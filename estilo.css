@@ -1,5 +1,16 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2eef14e;
+}
 
 h1 {
   text-align: center;
@@ -7,35 +18,24 @@ h1 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 40px;
 }
-h2{
-  font-size: 32px;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 40px;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2eef14e;
-}
 
 .cards-container {
-    
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
-  gap: 30px; 
+  justify-content: center;
+  gap: 30px;
 }
-
 
 .card {
   background-color: rgb(237, 206, 229);
   padding: 30px 25px;
   border-radius: 10px;
   box-shadow: 0px 8px 18px rgba(131, 24, 115, 0.822);
-  width: 320px; 
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 
 .card h2 {
   font-family: 'Playfair Display', serif;
@@ -45,22 +45,19 @@ body {
   color: #d81a7f;
 }
 
-
 .infos p {
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   margin: 6px 0;
-  border-bottom: 1px solid #d81a7f; 
+  border-bottom: 1px solid #d81a7f;
   padding-bottom: 4px;
   font-size: 14px;
 }
-
 
 .infos strong {
   font-weight: 600;
   color: #100a0a;
 }
-
 
 .rodape {
   margin-top: 20px;
@@ -78,21 +75,28 @@ body {
   color: #340820;
   text-decoration: underline;
 }
+
+.footer {
+  color: #e773ad;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+  padding: 20px 10px;
+}
+
 .idioma-titulo {
   font-size: 2em;
   margin-bottom: 20px;
   color: #222;
   border-left: 5px solid #d53987;
-  padding-left: 10px;
+  padding-left: 10px;
   box-shadow: 0px 8px 18px rgba(223, 170, 216, 0.822);
 }
-
 
 .container {
   position: relative;
   text-align: center;
   color: rgba(246, 216, 232, 0.989);
-  
 }
 
 .background {
@@ -112,7 +116,6 @@ body {
   z-index: 0;
 }
 
-
 .overlay {
   background-color: rgba(41, 32, 39, 0.4);
   height: 100%;
@@ -122,12 +125,6 @@ body {
   align-items: center;
   position: relative;
   z-index: 1;
-}
-
-.overlay h2 {
-  font-size: 24px;
-  letter-spacing: 2px;
-  margin: 0;
 }
 
 .overlay h1 {
@@ -159,6 +156,7 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+
 .botoes button {
   background-color: #cb2a78;
   border: none;
@@ -173,34 +171,19 @@ body {
   color: #ff54b2;
 }
 
-.footer {
-  color: #ff74b9;
-  text-align: center; 
-  font-size: 15px;
-  padding:smaller; 
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-
 .container2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  margin-top: 40px;
 }
-
 
 .image-container {
   position: relative;
   overflow: hidden;
 }
+
 .image-container::after {
   content: "";
   position: absolute;
@@ -208,17 +191,16 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Filtro escuro */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
 .image-container img {
-
   width: 100%;
   height: auto;
   display: block;
- 
 }
+
 .text-top {
   position: absolute;
   top: 20px;
@@ -228,7 +210,7 @@ body {
   font-size: 0.9rem;
   letter-spacing: 2px;
   font-weight: 600;
-  
+  z-index: 2;
 }
 
 .city-name {
@@ -240,13 +222,8 @@ body {
   font-size: 2.5rem;
   color: white;
   text-shadow: 2px 2px 6px rgba(236, 229, 235, 0.866);
-
-}
-.text-top,
-.city-name {
   z-index: 2;
 }
-
 
 .title {
   text-align: center;
@@ -288,7 +265,6 @@ body {
   background-color: #333;
 }
 
-
 .form-container {
   background-color: #ebc9da;
   padding: 30px;
@@ -304,22 +280,25 @@ body {
   padding: 10px;
   font-size: 14px;
 }
+
 .btn-dark {
   background-color: #333;
   border: none;
   transition: background-color 0.3s ease;
 }
+
 .btn-dark:hover {
-  background-color:  #ff97c8; /*fiz isso para deixar o botão rosa*/
+  background-color: #ff97c8;
 }
 
-.accordion-button:focus { /*botoes da pag profissional*/
+.accordion-button:focus {
   background-color: #ff97c8;
   color: #000;
-  box-shadow: none; /* tira sombra padrão do bootstrap */
+  box-shadow: none;
 }
+
 .carousel-inner img {
-  height: 400px;       /* altura fixa que você quiser */
-  object-fit: cover;   /* mantém proporção e corta o excesso */
-  width: 100%;         /* largura 100% do container */
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
 }
